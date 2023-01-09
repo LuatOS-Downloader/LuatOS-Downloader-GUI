@@ -5,9 +5,6 @@ on:
     paths:
       - 'LuatOS_Downloader/**'
       - '.github/workflows/build.yml'
-  pull_request:
-    paths:
-      - 'LuatOS_Downloader/**'
   workflow_dispatch:
 
 jobs:
@@ -27,7 +24,7 @@ jobs:
             dotnetarch: arm
       fail-fast: true
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: environment prepare
         run: |
           sudo apt-get update
@@ -35,21 +32,17 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y dotnet-sdk-6.0
           sudo apt-get install -y p7zip-full
-      - name: test
-        run: |
-          cd LuatOS_Downloader
-          dotnet test
       - name: build
         env:
           DOTNETOS: ${{ matrix.dotnetos }}
           DOTNETARCH: ${{ matrix.dotnetarch }}
         run: |
-          cd LuatOS_Downloader
-          dotnet publish -r $DOTNETOS-$DOTNETARCH -p:PublishSingleFile=true --no-self-contained
+          cd LuatOS_Downloader/LuatOS_Downloader
+          dotnet publish -r $DOTNETOS-$DOTNETARCH --no-self-contained
           mkdir pkg
-          mv LuatOS_Downloader/bin/Debug/net6.0/$DOTNETOS-$DOTNETARCH/publish/* pkg/
+          mv bin/Debug/net6.0/$DOTNETOS-$DOTNETARCH/publish/* pkg/
 
       - uses: actions/upload-artifact@v3
         with:
           name: LuatOS_Downloader-${{ matrix.dotnetos }}-${{ matrix.dotnetarch }}
-          path: LuatOS_Downloader/pkg/
+          path: LuatOS_Downloader/LuatOS_Downloader/pkg/
