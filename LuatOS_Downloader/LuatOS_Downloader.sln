@@ -5,7 +5,9 @@ VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuatOS_Downloader", "LuatOS_Downloader\LuatOS_Downloader.csproj", "{E7E0322B-FD5E-4818-9A9F-5E507C8211B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuatOS_Downloader_Test", "LuatOS_Downloader_Test\LuatOS_Downloader_Test.csproj", "{88BCCC5E-48BA-475E-9F3D-4D26338C2F53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuatOS_Downloader_Test", "LuatOS_Downloader_Test\LuatOS_Downloader_Test.csproj", "{88BCCC5E-48BA-475E-9F3D-4D26338C2F53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuatOSPack", "LuatOSPack\LuatOSPack.csproj", "{4F84B4B1-F162-45B1-9870-4125D672E1F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{88BCCC5E-48BA-475E-9F3D-4D26338C2F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88BCCC5E-48BA-475E-9F3D-4D26338C2F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88BCCC5E-48BA-475E-9F3D-4D26338C2F53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F84B4B1-F162-45B1-9870-4125D672E1F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F84B4B1-F162-45B1-9870-4125D672E1F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F84B4B1-F162-45B1-9870-4125D672E1F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F84B4B1-F162-45B1-9870-4125D672E1F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

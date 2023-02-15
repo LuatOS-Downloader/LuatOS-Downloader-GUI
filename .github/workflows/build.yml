@@ -38,7 +38,7 @@ jobs:
           DOTNETARCH: ${{ matrix.dotnetarch }}
         run: |
           cd LuatOS_Downloader/LuatOS_Downloader
-          dotnet publish -r $DOTNETOS-$DOTNETARCH --no-self-contained
+          dotnet publish -r $DOTNETOS-$DOTNETARCH -p:PublishSingleFile=true --no-self-contained
           mkdir pkg
           mv bin/Debug/net6.0/$DOTNETOS-$DOTNETARCH/publish/* pkg/
 

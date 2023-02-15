@@ -8,5 +8,6 @@ namespace LuatOS_Downloader.Views
         {
             InitializeComponent();
         }
+
     }
 }
