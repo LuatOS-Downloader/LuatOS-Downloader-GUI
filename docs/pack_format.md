@@ -69,9 +69,10 @@ firmware_maker = ""
 firmware = "air101_soc"
 driver = "ch340_driver"
 
-#其他信息，给命令行参数使用
-[others]
-cmd_args = ["arg1=123123","fw_file=air101_soc/LuatOS-SoC_V0013_AIR101.soc"] # 如用不到，可为空数组
+#其他信息，给命令行参数使用。如用不到，可为空
+[cmd_args]
+arg1 = "123123"
+fw_file = "air101_soc/LuatOS-SoC_V0013_AIR101.soc"
 ```
 
 ## 日志打印工具的交互逻辑
@@ -102,7 +103,7 @@ log.exe 包名 操作命令 [设备id] [附加参数]
 
 ### 附加参数
 
-为依赖包配置信息`config.toml`中的`others.cmd_args`数组内容，用于区分配置
+为依赖包配置信息`config.toml`中的`others.cmd_args`数组内容，用于区分配置。传入格式为`参数名=值 参数名=值 ...`
 
 ## 下载烧录工具的交互逻辑
 
@@ -138,7 +139,7 @@ down.exe 包名 操作命令 文件路径 设备id [附加参数]
 
 ### 附加参数
 
-为依赖包配置信息`config.toml`中的`others.cmd_args`数组内容，用于区分配置
+为依赖包配置信息`config.toml`中的`others.cmd_args`数组内容，用于区分配置。传入格式为`参数名=值 参数名=值 ...`
 
 ## 文件系统与固件合并工具的交互逻辑
 
@@ -172,7 +173,7 @@ fm.exe 包名 操作命令 输入文件路径 输出文件路径 [附加参数]
 
 ### 附加参数
 
-为依赖包配置信息`config.toml`中的`others.cmd_args`数组内容，用于区分配置
+为依赖包配置信息`config.toml`中的`others.cmd_args`数组内容，用于区分配置。传入格式为`参数名=值 参数名=值 ...`
 
 ## 固件
 

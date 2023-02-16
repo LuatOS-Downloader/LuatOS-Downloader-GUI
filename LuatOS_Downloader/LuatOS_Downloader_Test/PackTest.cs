@@ -19,6 +19,8 @@ namespace LuatOS_Downloader_Test
             Assert.AreEqual(pack.Show, true);
             Assert.AreEqual(pack.Architecture, "win_x64");
             Assert.AreEqual(pack.Authors[0], "chenxuuu");
+
+            Assert.AreEqual(pack.CmdArgs["test1"], "abc");
         }
     }
 }

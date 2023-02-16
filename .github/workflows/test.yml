@@ -21,7 +21,7 @@ jobs:
           choco install dotnet-sdk --version 6.0.404 -y
       - name: test
         run: |
-          curl https://github.com/LuatOS-Downloader/test-pack/releases/download/0.0.0/test-win_x64.zip -o test-win_x64.zip -L
+          curl https://github.com/LuatOS-Downloader/test-pack/releases/download/0.0.0.2/test-win_x64.zip -o test-win_x64.zip -L
           unzip test-win_x64
           cd LuatOS_Downloader
           dotnet test
